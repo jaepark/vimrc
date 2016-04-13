@@ -26,7 +26,7 @@ set wildchar=<TAB>
 """ [ Formatting ] """
 filetype on
 filetype plugin on
-au FileType tpp,c,cpp,cs,html,php,php4,js,css,jsp set nu
+au FileType tpp,c,cpp,cs,html,php,php4,js,css,jsp,py set nu
 
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 "let backspace delete indent
@@ -64,18 +64,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'pangloss/vim-javascript'
 
 " Syntax highlight for .ejs files in vim
 au BufNewFile,BufRead *.ejs set filetype=js
